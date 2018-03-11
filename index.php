@@ -18,6 +18,9 @@
                  <li>
                     <a href="cw3/cw3.php">Ćwiczenie 3</a>
                 </li>
+                <li>
+                    <a href="cw4/cw4.php">Ćwiczenie 4</a>
+                </li>
             </ul>
         </div>
     </body>
