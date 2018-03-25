@@ -12,31 +12,48 @@
                 <img src="Firma1.png" alt="firma"/>
             </a> 
         </div>
-        <div id="menu">
-            <ul>
-                <li><a href="info.html">Informacje ogólne</a> </li>
-                <li><a href="dzialy.html">Działy</a></li>
-                <li><a href="kontakt.html">Kontakt</a> </li>
-            </ul>
+               <div id="menu">
+            <ol>
+                <li><a href="info.html">Informacje o firmie</a>
+                    <ul>
+                        <li><a href="#">Kierownictwo</a></li>
+                        <li><a href="#">Infrastruktura</a></li>
+                        <li><a href="#">Nowości</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="dzialy.html">Działy</a>
+                    <ul>
+                        <li><a href="#">Dział - 1</a></li>
+                        <li><a href="#">Dział - 2</a></li>
+                        <li><a href="#">Dział- 3</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+
+            </ol>
         </div>
         <div id="content">
-           Informacja o działach
+            Informacja o działach
         </div>
         <div id="stopka">
             <span id="autor">Wykonał Adam Kowalski</span>
             <span id="data"></span>
         </div>
         <script type="text/javascript">
-            window.onload = function (){
+            window.onload = function () {
                 var d = new Date();
-                var dni = ["niedziela","poniedziałek","wtorek"
-                    ,"środa","czwartek","piątek","sobota"];
-                var miesiace = ["styczeń","luty","marzec","kwiecień","maj"
-                ,"czerwiec","lipiec","sierpień","wrzesień"
-            ,"październik","listopad","grudzień"];
+                var dni = ["niedziela", "poniedziałek", "wtorek"
+                            , "środa", "czwartek", "piątek", "sobota"];
+                var miesiace = ["styczeń", "luty", "marzec", "kwiecień", "maj"
+                            , "czerwiec", "lipiec", "sierpień", "wrzesień"
+                            , "październik", "listopad", "grudzień"];
                 document.getElementById("data").innerHTML = "Dzisiaj: "
-                        +dni[d.getDay()]+" "+
-                        d.getDate()+" "+miesiace[d.getMonth()]+" "+d.getFullYear();
+                        + dni[d.getDay()] + " " +
+                        d.getDate() + " " + miesiace[d.getMonth()] + " " + d.getFullYear();
             };
         </script>
     </body>
