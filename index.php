@@ -21,6 +21,9 @@
                 <li>
                     <a href="cw4/cw4.php">Ćwiczenie 4</a>
                 </li>
+                 <li>
+                     <a href="cw5_Witryny/cw5_wit.html">Ćwiczenie 5</a>
+                </li>
             </ul>
         </div>
     </body>
