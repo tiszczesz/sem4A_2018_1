@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link href="cw5_wit.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="baner">
+            <a href="cw5_wit.html">
+                <img src="Firma1.png" alt="firma"/>
+            </a> 
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="info.html">Informacje ogólne</a> </li>
+                <li><a href="dzialy.html">Działy</a></li>
+                <li><a href="kontakt.html">Kontakt</a> </li>
+            </ul>
+        </div>
+        <div id="content">
+           kontakt do firmy
+        </div>
+        <div id="stopka">
+            <span id="autor">Wykonał Adam Kowalski</span>
+            <span id="data"></span>
+        </div>
+        <script type="text/javascript">
+            window.onload = function (){
+                var d = new Date();
+                var dni = ["niedziela","poniedziałek","wtorek"
+                    ,"środa","czwartek","piątek","sobota"];
+                var miesiace = ["styczeń","luty","marzec","kwiecień","maj"
+                ,"czerwiec","lipiec","sierpień","wrzesień"
+            ,"październik","listopad","grudzień"];
+                document.getElementById("data").innerHTML = "Dzisiaj: "
+                        +dni[d.getDay()]+" "+
+                        d.getDate()+" "+miesiace[d.getMonth()]+" "+d.getFullYear();
+            };
+        </script>
+    </body>
+</html>
