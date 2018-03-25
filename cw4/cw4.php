@@ -11,7 +11,7 @@
         $text = 'Ala ma kota';        
         echo Reverse($text);
         echo "<br>";
-        echo fun2($text,'-'); // A-l-a m-a k-o-t-a
+        echo Spray($text,'-'); // A-l-a m-a k-o-t-a
       //  print_r(explode('', $text));
         ?>
     </body>
