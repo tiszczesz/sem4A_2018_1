@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #stopka{position: absolute; bottom: 0px; width: 100%; padding: 10px; 
+                    background-color: grey;}
+            </style>
+        </head>
+        <body>
+            <div>To jest strona</div>
+            
+            <div id="stopka">Tutaj stopka <span id="wynik"></span></div>
+        <script type="text/javascript">
+            window.onload = function () {
+                var data = new Date();
+                var dni = ["niedziela", "poniedziałek", "wtorek", "środa",
+                    "czwartek", "piątek", "sobota"];
+                var dzien = data.getDay() === 0 || data.getDay() === 6 ?
+                        "<span style='color: green'>" + dni[data.getDay()] + "</span>" :
+                        "<span>" + dni[data.getDay()] + "</span>";
+                var miesiace = ["styczeń", "luty", "marec", "kwiecień", "maj", "czerwiec"
+                            , "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"];
+                var tekst = "Dzisiaj, "+ dzien + " " + data.getDate() + " " 
+                        + miesiace[data.getMonth()] + " " + data.getFullYear();
+                document.getElementById("wynik").innerHTML = tekst;
+            };
+        </script>
+    </body>
+</html>
