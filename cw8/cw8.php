@@ -42,6 +42,7 @@
             print_r($t1);
             echo $smiec;
             ?>
+        <h1>Sortowanie tablic indeksowanych</h1>
         </pre>
     </body>
 </html>
