@@ -43,6 +43,14 @@
             echo $smiec;
             ?>
         <h1>Sortowanie tablic indeksowanych</h1>
+            <?php
+            $liczby = [12,78,5,-7,0,66,234,2,11];
+            print_r($liczby);
+            sort($liczby);
+             print_r($liczby);
+             rsort($liczby);
+             print_r($liczby);
+            ?>
         </pre>
     </body>
 </html>
