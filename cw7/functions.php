@@ -24,3 +24,19 @@ function Samogloski($tekst){
    }
    return $licznik;
 }
+function LiteryRegEx($tekst){
+    $path = "/[a-zA-ZąężśćźółńĄĘŻŹŚĆŃŁóÓ]/";
+    $licznik = 0;
+    for($i=0;$i<strlen($tekst);$i++){ 
+        if(preg_match($path,$tekst[$i])) $licznik++;
+    }
+    return $licznik;
+}
+function SamogloskiRegEx($tekst){
+    $path = "/[aeuioyąęóAEUIOYĄĘÓ]/";
+    $licznik = 0;
+    for($i=0;$i<strlen($tekst);$i++){ 
+        if(preg_match($path,$tekst[$i])) $licznik++;
+    }
+    return $licznik;
+}

@@ -17,8 +17,8 @@
             $tekst = $_POST['tekst'];
             echo "<p>{$tekst}</p>\n";
             echo "<p>Ilość znaków: " . strlen($tekst) . "</p>\n";
-            echo "<p>Ilość liter: " . Litery($tekst) . "</p>\n";
-            echo "<p>Ilość liter: " . Samogloski($tekst) . "</p>\n";
+            echo "<p>Ilość liter: " . LiteryRegEx($tekst) . "</p>\n";
+            echo "<p>Ilość samogłosek: " . SamogloskiRegEx($tekst) . "</p>\n";
         }
         ?>
     </body>
