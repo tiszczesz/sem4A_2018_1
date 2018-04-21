@@ -1,0 +1,5 @@
+Adam|Nowak|3A
+Monika|Gruca|3B
+Tomasz|Bomasz|4A
+Franiszek|Białas|4A
+Ryszard|Kowalski|4A
