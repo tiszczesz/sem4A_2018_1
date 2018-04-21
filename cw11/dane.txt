@@ -3,3 +3,6 @@ Monika|Gruca|3B
 Tomasz|Bomasz|4A
 Franiszek|Białas|4A
 Ryszard|Kowalski|4A
+Danuta|Małecka|2B
+Danuta|Małecka|2B
+Danuta|Małecka|2B

@@ -16,6 +16,13 @@
             
             fclose($f);
             ?>
+        <h2>A teraz dopisujemy do pliku</h2>
+        <?php
+        $line = "Danuta|Małecka|2B".PHP_EOL;
+        $f = fopen('dane.txt', 'a');
+        fwrite($f, $line);
+        fclose($f);
+        ?>
         <!--</pre>-->
     </body>
 </html>
