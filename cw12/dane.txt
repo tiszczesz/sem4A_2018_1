@@ -4,3 +4,4 @@ Tomasz|Bomasz|4A
 Franiszek|Białas|4A
 Ryszard|Kowalski|4A
 Danuta|Małecka|2B
+Test|Test|Test

@@ -25,6 +25,16 @@ function fromFileToArray($filename){
 }
 function toList(array $dane){
     $html = "<ol>\n";
-    
+    foreach ($dane as $line) {
+        $html .= "<li>Dane słuchacza: ";
+        $html .= "<ol type='a'><li>{$line[0]}</li><li>{$line[1]}</li>"
+                . "<li>{$line[2]}</li></ol>\n</li>\n";
+    }
     return $html."</ol>\n";
+}
+function SaveToFile($filename,array $dane){
+    $f = fopen($filename,'a');
+    $line = $dane[0].'|'.$dane[1].'|'.$dane[2].PHP_EOL;
+    fwrite($f, $line);
+    fclose($f);
 }
