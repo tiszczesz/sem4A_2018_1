@@ -5,10 +5,10 @@ if(isset($_POST['imie'])){
     $nazwisko = trim($_POST['nazwisko']);
     $semestr = trim($_POST['semestr']);
     if($imie=='' || $nazwisko=='' || $semestr==''){
-        echo "error";
+        header('Location: dodaj.html');
     }else{
         SaveToFile('dane.txt',[$imie,$nazwisko,$semestr]);
-        echo "przekierowanie do strony cw12.php";
+        header('Location: cw12.php');
     }
 }
 
