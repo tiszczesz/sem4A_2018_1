@@ -56,3 +56,10 @@ function deleteUser($id=0){
     $conn->query($sqlQuery);
     $conn->close();
 }
+function addWorker($imie, $nazwisko, $pensja){
+    $conn = getConnection();
+    if(!$conn) return;
+    $sqlQuery = "INSERT INTO pracownicy(imie,nazwisko,pensja) "
+            . "values('{$imie}','{$nazwisko}',{$pensja})";
+    $conn->query($sqlQuery);        
+}
