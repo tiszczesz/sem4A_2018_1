@@ -19,31 +19,49 @@
         <section id="srodkowy">
             <h3>PRZYPOMNIENIE O NASTĘPNEJ WIZYCIE</h3> 
             <?php
-               $conn = new mysqli("localhost", "root", "", "salon2018_4a");
-               //var_dump($conn);
-               $conn->query("SET NAMES utf8");
-               $sql = "SELECT imie,rodzaj,nastepna_wizyta,telefon FROM zwierzeta"
-                                   ." where nastepna_wizyta <>0 ";
-               $result = $conn->query($sql);
-               //var_dump($result);
-               while($row = $result->fetch_assoc()){
-                   //print_r($row);
-                   $rodzaj="";
-                   if($row['rodzaj']=='1') $rodzaj = "Pies:";
-                   if($row['rodzaj']=='2') $rodzaj = "Kot:";
-                   echo "<p>{$rodzaj} {$row['imie']}</p>";
-                   echo "<p>Data następnej wizyty: {$row['nastepna_wizyta']} "
-                   . "telefon właściciela: {$row['telefon']}</p>";
-               }
-               $conn->close();
+            $conn = new mysqli("localhost", "root", "", "salon2018_4a");
+            //var_dump($conn);
+            $conn->query("SET NAMES utf8");
+            $sql = "SELECT imie,rodzaj,nastepna_wizyta,telefon FROM zwierzeta"
+                    . " where nastepna_wizyta <>0 ";
+            $result = $conn->query($sql);
+            //var_dump($result);
+            while ($row = $result->fetch_assoc()) {
+                //print_r($row);
+                $rodzaj = "";
+                if ($row['rodzaj'] == '1')
+                    $rodzaj = "Pies:";
+                if ($row['rodzaj'] == '2')
+                    $rodzaj = "Kot:";
+                echo "<p>{$rodzaj} {$row['imie']}</p>";
+                echo "<p>Data następnej wizyty: {$row['nastepna_wizyta']} "
+                . "telefon właściciela: {$row['telefon']}</p>";
+            }
+            $conn->close();
             ?>
         </section>
         <section id="prawy">
             <h3>USŁUGI </h3> 
             <?php
-             
-                ?>
+            $conn = new mysqli("localhost", "root", "", "salon2018_4a");
+            //var_dump($conn);
+            $conn->query("SET NAMES utf8");
+            $sql = "SELECT nazwa,cena FROM uslugi";
+            $result = $conn->query($sql);
+             while ($row = $result->fetch_assoc()) {                
+                echo "<p>{$row['nazwa']} {$row['cena']}</p>";                
+            }
+            $sql2 = "SELECT MIN(cena) FROM uslugi";
+            $result = $conn->query($sql2);
+            $min = $result->fetch_row();
+            //var_dump($min);
+            echo "<p style='font-weight:bold'>Ceny już od: {$min[0]}</p>";
+            $conn->close();
             
+            ?>
+            <div>
+                <a href="nowaUsluga.php">Dodaj nową usługę</a>
+            </div>
         </section>       
     </body>
 </html>
