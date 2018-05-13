@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <title>Salon pielęgnacji</title>
         <link href="salon.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .error{color: red;}
+        </style>
     </head>
     <body>
         <section id="baner"><h1>SALON PIELĘGNACJI PSÓW I KOTÓW</h1></section>
@@ -24,10 +27,12 @@
                     <div class="line">
                         <label for="nazwa">Nazwa: </label>
                         <input type="text" id="nazwa" name="nazwa">
+                        <span class="error"></span>
                     </div>
                     <div class="line">
                         <label for="cena">Cena: </label>
                         <input type="text" id="cena" name="cena">
+                        <span class="error"></span>
                     </div>
                     <div class="line">
                         <input type="submit" value="Dodaj"/>
@@ -57,6 +62,7 @@
             <div>
                 <a href="nowaUsluga.html">Dodaj nową usługę</a>
             </div>
-        </section>       
+        </section>   
+        <script type="text/javascript" src="script1.js"></script>
     </body>
 </html>

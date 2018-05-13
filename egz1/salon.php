@@ -39,6 +39,9 @@
             }
             $conn->close();
             ?>
+            <div>
+                <a href="addAnimal.php">Dodaj nowego zwierzaka</a>
+            </div>
         </section>
         <section id="prawy">
             <h3>USŁUGI </h3> 
