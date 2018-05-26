@@ -1,5 +1,6 @@
 <?php
 require_once 'Semestr.php';
+require_once 'Osoba.php';
 function getConnection(){
     $conn = new mysqli("localhost","root","","sluchacze2018");
     if($conn->connect_errno!=0){
@@ -28,6 +29,15 @@ function semToSelect($nazwa,array $dane){
         $html .= "<option value='{$row->getId()}'>{$row->getNazwa()}</option>\n";
     }
     return $html."</select>";
+}
+function saveOsoba(Osoba $o1){
+     $conn = getConnection();
+    if($conn==null)      {  return false;}
+    $sql = "INSERT INTO osoby(imie,nazwisko,semestrId) VALUES "
+            . "('{$o1->getImie()}','{$o1->getNazwisko()}',"
+            . "{$o1->getSemestr()})";
+    $result = $conn->query($sql);
+    return $result;
 }
 
 
