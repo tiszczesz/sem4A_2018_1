@@ -5,12 +5,19 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
         <div style="background-color: #993333">
+
             <input type="number" id="ilosc"/><br>
             <input type="checkbox" id="upust"/> Upust<br>
-            <input type="button" value="Kalkulacja" id="kalkulacja"/>
+            <input type="button" value="Kalkulacja" id="kalkulacja"/><br> 
+            <form action="out.php" method="post">
+                <input type="submit" value="Test" id="btnTest"/><br> 
+            </form>
+            <button id="test2" disabled="disabled">Sprawdź</button>
+
         </div>
         <div id="wynik"></div>
         <script type="text/javascript" src="skrypt.js"></script>
